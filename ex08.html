@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="doanSo();" value="Choi">
+<script>
+    function doanSo() {
+        let a = parseInt(prompt("Gioi han tren cua khoang muon choi"));
+        let b = parseInt(prompt("Gioi han duoi cua khoang muon choi"));
+        let c = Math.floor((Math.random() * a) + b);
+        console.log(c);
+        let d = parseInt(prompt("Nhap so ban doan"));
+        if (d === c) {
+            alert("Ban da doan dung");
+        }
+        if (d !== c) {
+            alert("Ban da doan sai, ban con 2 lan doan lai")
+            for (let i = 0; i < 2; i++) {
+                let d1 = parseInt(prompt("Hay nhap lai so khac"));
+                if (d1 !== c) {
+                    if (d1 < c) {
+                        alert("So ban doan nho hon so dung");
+
+                    } else {
+                        alert("So ban doan lon hon so dung");
+                    }
+                }
+                if (d1 === c) {
+                    alert("Ban da doan dung");
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
